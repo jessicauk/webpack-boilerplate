@@ -9,4 +9,13 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, './dist'),
   },
+  module: {
+    rules: [
+      {
+        test: '/src/index.test.js',
+        use: 'mocha-loader',
+        exclude: /node_modules/,
+      },
+    ],
+  },
 };
